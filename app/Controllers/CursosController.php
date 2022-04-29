@@ -14,7 +14,7 @@ Class cursos extends Controllers{
             'cabecera' => 'Curso Semestral',
             'tag_pages' => 'Curso Thinkers Semestral'
         ];
-        $this->views->getView($this, 'cursos', $data);
+        $this->views->getView($this, 'semestral', $data);
 
     }
 
@@ -23,7 +23,7 @@ Class cursos extends Controllers{
             'cabecera' => 'Curso Anual',
             'tag_pages' => 'Curso Thinkers Anual'
         ];
-        $this->views->getView($this, 'cursos', $data);
+        $this->views->getView($this, 'anual', $data);
 
     }
 
@@ -32,7 +32,7 @@ Class cursos extends Controllers{
             'cabecera' => 'Curso Semi intensivo',
             'tag_pages' => 'Curso Thinkers Semi intensivo'
         ];
-        $this->views->getView($this, 'cursos', $data);
+        $this->views->getView($this, 'semiintensivo', $data);
     }
     
 

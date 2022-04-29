@@ -1,5 +1,5 @@
 <?php include_once 'Views/templates/head.php' ?>
-probando cursos anual
+probando cursos semintensivo
 
 
 <?php include_once 'Views/templates/footer.php' ?>
