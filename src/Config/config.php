@@ -19,9 +19,9 @@ if (PRODUCCION) {
 }else{
     define('BASE_URL', "https://formularios.test/");
     define('DB_HOST', "localhost");
-    define('DB_NAME', "u749649490_proyect_mvc");
-    define('DB_USER', "u749649490_hotaruv");
-    define('DB_PASSWORD', "LCzY60+]vsb6");
+    define('DB_NAME', "formularioIngresoThinkersDB");
+    define('DB_USER', "root");
+    define('DB_PASSWORD', "");
     define('DB_CHARSET', "utf8");
 
     define('HOST_MAIL', 'smtp.gmail.com');

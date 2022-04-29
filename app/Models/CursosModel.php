@@ -12,6 +12,11 @@ class CursosModel extends Mysql{
         //return $request;
     }
 
+    public function obtenerCurso(){
+        $query = "select * from cursos";
+        return $request  = $this->select_all($query);
+    }
+
 
     
 }

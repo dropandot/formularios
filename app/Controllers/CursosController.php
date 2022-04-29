@@ -21,23 +21,25 @@ class cursos extends Controllers
 
     public function anual()
     {
+
+        $cursos = $this->model->obtenerCurso();
+
         $data = [
-            'cabecera' => 'Curso Anual',
-            'tag_pages' => 'Curso Thinkers Anual'
+            "cabecera" => 'Curso Anual',
+            "tag_pages" => 'Curso Thinkers Anual',
+            "cursos" => $cursos
         ];
         $seperadores = explode('/', $_GET['url']);
 
-        Utils::dd($seperadores[1]);
+        //Utils::dd($seperadores[1]);
 
         //echo Utils::dd($_GET);
-        if(!empty($_POST)){
+        if (!empty($_POST)) {
             $prueba = $_POST['prueba'];
             $prueba1 = $_POST['prueba1'];
             $prueba2 = $_POST['prueba2'];
             $insertar = $this->model->InsertarCursoSemestral($prueba, $prueba1, $prueba2);
         }
-        
-
         $this->views->getView($this, 'anual', $data);
     }
 
