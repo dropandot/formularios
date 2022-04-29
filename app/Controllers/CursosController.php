@@ -25,10 +25,18 @@ class cursos extends Controllers
             'cabecera' => 'Curso Anual',
             'tag_pages' => 'Curso Thinkers Anual'
         ];
-        $prueba = $_POST['prueba'];
-        $prueba1 = $_POST['prueba1'];
-        $prueba2 = $_POST['prueba2'];
-        $insertar = $this->model->InsertarCursoSemestral($prueba, $prueba1, $prueba2);
+        $seperadores = explode('/', $_GET['url']);
+
+        Utils::dd($seperadores[1]);
+
+        //echo Utils::dd($_GET);
+        if(!empty($_POST)){
+            $prueba = $_POST['prueba'];
+            $prueba1 = $_POST['prueba1'];
+            $prueba2 = $_POST['prueba2'];
+            $insertar = $this->model->InsertarCursoSemestral($prueba, $prueba1, $prueba2);
+        }
+        
 
         $this->views->getView($this, 'anual', $data);
     }
