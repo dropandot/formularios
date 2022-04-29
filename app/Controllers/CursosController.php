@@ -32,7 +32,7 @@ Class cursos extends Controllers{
             'cabecera' => 'Curso Semi intensivo',
             'tag_pages' => 'Curso Thinkers Semi intensivo'
         ];
-        $this->views->getView($this, 'semi_intensivo', $data);
+        $this->views->getView($this, 'semiintensivo', $data);
     }
     
 
