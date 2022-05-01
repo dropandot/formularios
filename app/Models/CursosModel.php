@@ -16,6 +16,7 @@ class CursosModel extends Mysql{
         $query = "select * from cursos";
         return $request  = $this->select_all($query);
     }
+    
     public function InsertarIngresos(int $id_universidad, string $dp_nombre, int $dp_edad, int $dp_whatsApp, string $dp_email, string $dp_facebook, string $dp_domicilio, string $data_carrera,
 	string $data_escuela, string $data_horario, string $data_razonIngreso, string $ref_saberNosotros, string $ref_nombreTutor, int $ref_telefonoTutor, int $id_curso)
     {
