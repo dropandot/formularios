@@ -1,4 +1,4 @@
-    <footer class="footer">
+    <footer class="pie">
     <div class="pie__textos">
             <a href="https://thinkersmx.com/terminos-y-condiciones/" target="blank"><p class="pie_sep">TÉRMINOS Y CONDICIONES</p></a>
         </div>
