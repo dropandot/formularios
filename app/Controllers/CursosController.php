@@ -12,11 +12,13 @@ class cursos extends Controllers
 
     public function semestral()
     {
+        
         $data = [
             'cabecera' => '',
             'tag_pages' => 'Curso Thinkers Semestral'
         ];
         $this->views->getView($this, 'semestral', $data);
+        
     }
 
     public function anual()
@@ -49,4 +51,6 @@ class cursos extends Controllers
         ];
         $this->views->getView($this, 'semi_intensivo', $data);
     }
+
+    
 }
