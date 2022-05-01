@@ -15,7 +15,7 @@
     <?php include_once 'Views/templates/header.php' ?>
     <section class="barra"> 
         <div class="barra__img">
-            <a href="https://thinkersmx.com/" class="barra__img"><img src="./public/img/logo.webp" alt="Logo Thinkers"></a>
+            <a href="https://thinkersmx.com/" class="barra__img"><img src="../public/img/logo.webp" alt="Logo Thinkers"></a>
         </div>
         <div class="barra__derecha">
         <input id="menu-toggle" type="checkbox" />
