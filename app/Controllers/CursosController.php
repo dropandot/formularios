@@ -13,7 +13,7 @@ class cursos extends Controllers
     public function semestral()
     {
         $data = [
-            'cabecera' => 'Curso Semestral',
+            'cabecera' => '',
             'tag_pages' => 'Curso Thinkers Semestral'
         ];
         $this->views->getView($this, 'semestral', $data);
