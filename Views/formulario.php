@@ -111,6 +111,7 @@
         //     InsertarIngresos($dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
         //     $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor);
         // }
+        // include("CursosModel.php/");
     ?>
     
 

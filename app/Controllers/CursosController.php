@@ -52,7 +52,5 @@ class cursos extends Controllers
         $this->views->getView($this, 'semi_intensivo', $data);
     }
 
-    public function ingresarr(){
-        print_r($_POST);
-    }
+    
 }
