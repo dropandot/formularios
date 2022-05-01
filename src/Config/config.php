@@ -21,7 +21,7 @@ if (PRODUCCION) {
     define('DB_HOST', "localhost");
     define('DB_NAME', "formularioIngresoThinkersDB");
     define('DB_USER', "root");
-    define('DB_PASSWORD', "");
+    define('DB_PASSWORD', "1234");
     define('DB_CHARSET', "utf8");
 
     define('HOST_MAIL', 'smtp.gmail.com');
