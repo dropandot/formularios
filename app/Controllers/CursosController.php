@@ -26,7 +26,7 @@ class cursos extends Controllers
             'tag_pages' => 'Curso Thinkers Anual'
         ];
         $seperadores = explode('/', $_GET['url']);
-
+        $anual = 1;
         Utils::dd($seperadores[1]);
 
         //echo Utils::dd($_GET);
