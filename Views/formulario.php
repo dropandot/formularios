@@ -1,5 +1,5 @@
 <section class="form">
-    <form action="semestral()" method="post"> 
+    <form action="" method="post"> 
         <h2 class="form__titulo">Datos personales</h2>
         <div  class="form__d_f">
             <div class="form__100">
@@ -111,7 +111,7 @@
         //     InsertarIngresos($dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
         //     $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor);
         // }
-        // include("CursosModel.php/");
+        
         
 
     ?>

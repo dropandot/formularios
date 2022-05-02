@@ -37,40 +37,40 @@ class Mail
     {
         //Utils::dd($_POST);
         if (!isset($_POST) || !empty($_POST)) {
-            $salida = $_POST['salida'];
-            $destino = $_POST['destino'];
-            $fecha_salida = $_POST['fecha_salida'];
-            $fecha__llegada = $_POST['fecha_llegada'];
-            $pasajeros = $_POST['pasajeros'];
+            // $salida = $_POST['salida'];
+            // $destino = $_POST['destino'];
+            // $fecha_salida = $_POST['fecha_salida'];
+            // $fecha__llegada = $_POST['fecha_llegada'];
+            // $pasajeros = $_POST['pasajeros'];
             $nombre = $_POST['nombre'];
             $telefono = $_POST['telefono'];
             $mail = $_POST['email'];
-            $adicionales =  $_POST['adicionales'];
+            // $adicionales =  $_POST['adicionales'];
 
-            switch ($destino) {
-                case 0:
-                    $d = 'otros';
-                    break;
-                case 1:
-                    $d = 'Las Bahamas';
-                    break;
-                case 2:
-                    $d = 'Mérida';
-                    break;
-                case 3:
-                    $d = 'La Habana';
-                    break;
-                case 4:
-                    $d = 'República Dominicana';
-                    break;
-                case 5:
-                    $d = 'Costa Rica';
-                    break;
+            // switch ($destino) {
+            //     case 0:
+            //         $d = 'otros';
+            //         break;
+            //     case 1:
+            //         $d = 'Las Bahamas';
+            //         break;
+            //     case 2:
+            //         $d = 'Mérida';
+            //         break;
+            //     case 3:
+            //         $d = 'La Habana';
+            //         break;
+            //     case 4:
+            //         $d = 'República Dominicana';
+            //         break;
+            //     case 5:
+            //         $d = 'Costa Rica';
+            //         break;
 
-                default:
-                    $d = 'desconocido';
-                    break;
-            }
+            //     default:
+            //         $d = 'desconocido';
+            //         break;
+            // }
 
             $s = strtolower(Utils::strClear($salida));
             $fs = strtolower(Utils::strClear($fecha_salida));
@@ -186,9 +186,6 @@ class Mail
 
 
             $this->phpmailer->addReplyTo(USER_MAIL, 'Solicitudo de Más Información');
-            // $this->phpmailer->addCC('sales@fly-select.com');
-            // $this->phpmailer->addCC('gerencia@fly-select.com');
-            // $this->phpmailer->addCC('marketing@fly-select.com');
 
             $this->phpmailer->Body = "
             <h1>Solicitud De Vuelo Enviado desde Landing (VUELOS AL CARIBE)</h1>
