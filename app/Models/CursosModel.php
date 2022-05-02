@@ -16,10 +16,16 @@ class CursosModel extends Mysql{
         $query = "select * from cursos";
         return $request  = $this->select_all($query);
     }
+
     
+    
+<<<<<<< HEAD
     // public function InsertarIngresos(int $id_universidad, string $dp_nombre, int $dp_edad, int $dp_whatsApp, string $dp_email, string $dp_facebook, string $dp_domicilio, string $data_carrera,
 	// string $data_escuela, string $data_horario, string $data_razonIngreso, string $ref_saberNosotros, string $ref_nombreTutor, int $ref_telefonoTutor, int $id_curso)
     public function InsertarIngresos( string $dp_nombre, int $dp_whatsApp, string $dp_email, string $dp_facebook, string $dp_domicilio, string $data_carrera,
+=======
+    public function InsertarIngresos( string $dp_nombre, int $dp_edad, int $dp_whatsApp, string $dp_email, string $dp_facebook, string $dp_domicilio, string $data_carrera,
+>>>>>>> 7bb368150fb453f0c2ef92e12995d38727eda92e
 	string $data_escuela, string $data_horario, string $data_razonIngreso, string $ref_saberNosotros, string $ref_nombreTutor, int $ref_telefonoTutor)
     {
         $sql = "INSERT INTO ingresos( dp_nombre, dp_whatsApp, dp_email, dp_facebook, dp_domicilio, data_carrera,data_escuela, data_horario, data_razonIngreso, ref_saberNosotros, ref_nombreTutor, ref_telefonoTutor) 
@@ -29,6 +35,6 @@ class CursosModel extends Mysql{
         $request_insert = $this->insert($sql, $arrData);
         return $request_insert;
     }
-
+       
     
 }
