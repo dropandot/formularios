@@ -1,5 +1,5 @@
 <section class="form">
-    <form action="../app/Controllers/CursosController.php" method="post"> 
+    <form action="semestral()" method="post"> 
         <h2 class="form__titulo">Datos personales</h2>
         <div  class="form__d_f">
             <div class="form__100">
@@ -89,7 +89,7 @@
             </span>
         </div>
         <div class="form__boton">
-            <button  name="registrer" class="form__enviar">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+            <button name="registrer" class="form__enviar">Enviar <i class="fa-regular fa-paper-plane"></i></button>
         </div>
     </form>
     
