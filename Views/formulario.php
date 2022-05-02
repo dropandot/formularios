@@ -1,5 +1,5 @@
 <section class="form">
-    <form action="semestral()" method="post"> 
+    <form action="" method="post"> 
         <h2 class="form__titulo">Datos personales</h2>
         <div  class="form__d_f">
             <div class="form__100">

@@ -18,28 +18,31 @@ class cursos extends Controllers
             'tag_pages' => 'Curso Thinkers Semestral'
         ];
         $this->views->getView($this, 'semestral', $data);
+        echo("Hola :3");
         
         if(!empty($_POST)){
-            $dp_nombre= trim($_POST['form_name']);
-            $dp_edad=trim($_POST['form_edad']);
-            $dp_whatsApp= trim($_POST['form_num']);
-            $dp_email=trim($_POST['form_email']);
-            $dp_facebook= trim($_POST['form_face']);
-            $dp_domicilio=trim($_POST['form_dom']);
-            $data_carrera= trim($_POST['form_carrera']);
-            $data_escuela= trim($_POST['form_escuela']);
-            $data_horario= trim($_POST['form_horaio']);
-            $data_razonIngreso= trim($_POST['form_cuentanos']);
-            $ref_saberNosotros= trim($_POST['form_csdt']); 
-            $ref_nombreTutor= trim($_POST['form_name_padre']);
-            $ref_telefonoTutor= trim($_POST['form_tel_padre']);
-            $ingresar = $this->model->InsertarIngresos($dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
+            $dp_nombre=$_POST['form_name'];
+            $dp_edad=$_POST['form_edad'];
+            $dp_whatsApp= $_POST['form_num'];
+            $dp_email=$_POST['form_email'];
+            $dp_facebook= $_POST['form_face'];
+            $dp_domicilio=$_POST['form_dom'];
+            $data_carrera= $_POST['form_carrera'];
+            $data_escuela= $_POST['form_escuela'];
+            $data_horario= $_POST['form_horario'];
+            $data_razonIngreso= $_POST['form_cuentanos'];
+            $ref_saberNosotros= $_POST['form_csdt']; 
+            $ref_nombreTutor= $_POST['form_name_padre'];
+            $ref_telefonoTutor= $_POST['form_tel_padre'];
+            $ingresar = $this->model->InsertarIngresos($dp_nombre, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor);
-            // $ingresar = new CursosModel();
-            // $ingresar = $this->model->InsertarIngresos($dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
-            // $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor);
-            // InsertarCursoSemestral($prueba, $prueba1, $prueba2);
+                // $ingresar = new CursosModel();
+                // $ingresar = $this->model->InsertarIngresos($dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
+                // $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor);
+                // InsertarCursoSemestral($prueba, $prueba1, $prueba2);
         }
+
+        $this->views->getView($this, 'semestral', $data);
     }
 
     public function anual()
@@ -48,10 +51,10 @@ class cursos extends Controllers
             'cabecera' => 'Curso Anual',
             'tag_pages' => 'Curso Thinkers Anual'
         ];
-        $seperadores = explode('/', $_GET['url']);
-        $anual = 1;
-        Utils::dd($seperadores[1]);
-
+        // $seperadores = explode('/', $_GET['url']);
+        // $anual = 1;
+        // Utils::dd($seperadores[1]);
+        echo("Hola :3");
         //echo Utils::dd($_GET);
         if(!empty($_POST)){
             $prueba = $_POST['prueba'];
