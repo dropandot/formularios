@@ -18,10 +18,10 @@ class cursos extends Controllers
             'tag_pages' => 'Curso Thinkers Semestral'
         ];
         $this->views->getView($this, 'semestral', $data);
-        echo("Hola :3");
+        // echo("1");
         
-<<<<<<< HEAD
         if(!empty($_POST)){
+            $id_universidad=$_POST['form_uni'];
             $dp_nombre=$_POST['form_name'];
             $dp_edad=$_POST['form_edad'];
             $dp_whatsApp= $_POST['form_num'];
@@ -35,17 +35,24 @@ class cursos extends Controllers
             $ref_saberNosotros= $_POST['form_csdt']; 
             $ref_nombreTutor= $_POST['form_name_padre'];
             $ref_telefonoTutor= $_POST['form_tel_padre'];
-            $ingresar = $this->model->InsertarIngresos($dp_nombre, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
-            $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor);
+            $id_curso = 1;
+            $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
+            $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
                 // $ingresar = new CursosModel();
                 // $ingresar = $this->model->InsertarIngresos($dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
                 // $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor);
                 // InsertarCursoSemestral($prueba, $prueba1, $prueba2);
+            if($ingresar){
+                ?>
+                    echo'<script type="text/javascript">
+                    alert("registro completo");
+                    </script>';
+                <?php
+            }
         }
 
+
         $this->views->getView($this, 'semestral', $data);
-=======
->>>>>>> 7bb368150fb453f0c2ef92e12995d38727eda92e
     }
 
     public function anual()
@@ -57,7 +64,7 @@ class cursos extends Controllers
         // $seperadores = explode('/', $_GET['url']);
         // $anual = 1;
         // Utils::dd($seperadores[1]);
-        echo("Hola :3");
+        echo("2");
         //echo Utils::dd($_GET);
         if(!empty($_POST)){
             $prueba = $_POST['prueba'];
