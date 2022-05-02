@@ -34,11 +34,11 @@
                 <div class="form__selector">
                     <select type="search" class="form__input" name="form_uni" id="form-uni" required="required" aria-required="true" min="6" max="100">
                         <option>---Selecciona---</option>
-                        <option value="UNAM">UNAM</option>
-                        <option value="IPN">IPN</option>
-                        <option value="UANL">UANL</option>
-                        <option value="UDEG">UDEG</option>
-                        <option value="UASLP">UASLP</option>
+                        <option value="1">UNAM</option>
+                        <option value="2">IPN</option>
+                        <option value="3">UANL</option>
+                        <option value="4">UDEG</option>
+                        <option value="5">UASLP</option>
                     </select>
                 </div>
             </div>
