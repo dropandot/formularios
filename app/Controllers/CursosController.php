@@ -7,7 +7,7 @@ class cursos extends Controllers
     public function __construct()
     {
         parent::__construct();
-        $this->enviar_correo = new Mail();
+        $this->enviar_correo = new Mail();;
     }
 
     public function semestral()
