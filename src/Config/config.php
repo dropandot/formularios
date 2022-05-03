@@ -26,8 +26,8 @@ if (PRODUCCION) {
 
     define('HOST_MAIL', 'smtp.gmail.com');
     define('PORT_MAIL', 587);
-    define('USER_MAIL', 'vuelos.flyselect@gmail.com');
-    define('PASSWORD_MAIL', 'sxjwmexvwvfkgrvr');
+    define('USER_MAIL', 'angelcloe132@gmail.com');
+    define('PASSWORD_MAIL', 'Zomber_z4');
     
 }
 const SPD = "."; //separador de decimales
