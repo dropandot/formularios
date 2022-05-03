@@ -124,7 +124,7 @@ class cursos extends Controllers
     public function semiIntensivo()
     {
         $data = [
-            'cabecera' => 'Semi-Intensivo',
+            'cabecera' => '',
             'tag_pages' => 'Curso Thinkers Semi intensivo'
         ];
 
