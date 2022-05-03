@@ -2,9 +2,12 @@
 
 class cursos extends Controllers
 {
+    private $enviar_correo;
+
     public function __construct()
     {
         parent::__construct();
+        $this->enviar_correo = new Mail();
     }
 
     public function semestral()
@@ -32,9 +35,30 @@ class cursos extends Controllers
             $ref_nombreTutor= $_POST['form_name_padre'];
             $ref_telefonoTutor= $_POST['form_tel_padre'];
             $id_curso = 1;
+
+            $info = [
+                $id_universidad,
+                $dp_nombre,
+                $dp_edad,
+                $dp_whatsApp,
+                $dp_emai,
+                $dp_facebook,
+                $dp_domicilio,
+                $data_carrera,
+                $data_escuela,
+                $data_horario,
+                $data_razonIngreso,
+                $ref_saberNosotros, 
+                $ref_nombreTutor,
+                $ref_telefonoTutor,
+                $id_curso
+            ];
+
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
-            if($ingresar){
+            if($ingresar){ // No enviar alertas, busca alternativa
+                $this->enviar_correo->information(info);
+
                 ?>
                     echo'<script type="text/javascript">
                     alert("registro completo");
@@ -77,7 +101,7 @@ class cursos extends Controllers
             $id_curso = 2;
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
-            if($ingresar){
+            if($ingresar){ // No enviar alertas, busca alternativa
                 ?>
                     echo'<script type="text/javascript">
                     alert("registro completo");
@@ -117,7 +141,7 @@ class cursos extends Controllers
             $id_curso = 3;
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
-            if($ingresar){
+            if($ingresar){ // No enviar alertas, busca alternativa
                 ?>
                     echo'<script type="text/javascript">
                     alert("registro completo");
