@@ -1,3 +1,3 @@
 
 <?php
-Utils::redirect(Utils::base_url().'cursos/semestral');
+Utils::redirect(Utils::base_url().'cursos/semi_intensivo');

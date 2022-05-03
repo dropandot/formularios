@@ -98,21 +98,31 @@ class Mail extends Controllers{
     }
     
     private function sendEmail(array $info){
-    //    try {
-    //        $this->phpmailer->setFrom(USER_MAIL, "Thinkers");
+        try {
+            $this->phpmailer->setFrom(USER_MAIL, "Thinkers");
            
-    //        switch($info){
-    //            case "curso semestral":
-    //                 $this->phpmailer->Subject = 'Inscripción al Curso Semestral';
-    //                 break;
-                        
+            switch($info){
+                case "curso semestral":
+                    $this->phpmailer->Subject = 'Inscripción al Curso Semestral';
+                    break;
+                case "curso anual":
+                    $this->phpmailer->Subject = 'Inscripción al Curso Anual';
+                    break;
+                case "curso semi-intensivo":
+                    $this->phpmailer->Subject = 'Inscripción al Curso Semi-Intensivo';
+                    break;
+                default:
+                    $this->phpmailer->Subject = 'ERROR';
+                    break;
+            }    
 
-
-    //        }
-
-    
-
-    //    }
+            $this->phpmailer->addAddress(USER_MAIL);
+            $this->phpmailer->addReplyTo(USER_MAIL, 'Más Información');
+            $this->phpmailer->Body = "";
+        } catch(Exception $e) {
+           echo "Message could not be sent. Mailer Error: {$this->phpmailer->ErrorInfo}";
+           return false;
+        }
     }
 }
 

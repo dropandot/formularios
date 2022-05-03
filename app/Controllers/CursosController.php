@@ -11,14 +11,12 @@ class cursos extends Controllers
         $this->enviar_correo = new Mail();;
     }
 
-    public function semestral()
+    public function semestral() 
     {
-        
         $data = [
             'cabecera' => '',
             'tag_pages' => 'Curso Thinkers Semestral'
         ];
-        $this->views->getView($this, 'semestral', $data);
 
         if(!empty($_POST)){
             $id_universidad=$_POST['form_uni'];
@@ -83,7 +81,7 @@ class cursos extends Controllers
             'cabecera' => '',
             'tag_pages' => 'Curso Thinkers Anual'
         ];
-        $this->views->getView($this, 'anual', $data);
+        
         if(!empty($_POST)){
             $id_universidad=$_POST['form_uni'];
             $dp_nombre=$_POST['form_name'];
@@ -100,6 +98,9 @@ class cursos extends Controllers
             $ref_nombreTutor= $_POST['form_name_padre'];
             $ref_telefonoTutor= $_POST['form_tel_padre'];
             $id_curso = 2;
+            
+            
+
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
             if($ingresar){ // No enviar alertas, busca alternativa
@@ -116,14 +117,17 @@ class cursos extends Controllers
                 <?php
             }
         }
+
+        $this->views->getView($this, 'anual', $data);
     }
 
     public function semiIntensivo()
     {
         $data = [
-            'cabecera' => '',
+            'cabecera' => 'Semi-Intensivo',
             'tag_pages' => 'Curso Thinkers Semi intensivo'
         ];
+
         if(!empty($_POST)){
             $id_universidad=$_POST['form_uni'];
             $dp_nombre=$_POST['form_name'];
@@ -140,6 +144,9 @@ class cursos extends Controllers
             $ref_nombreTutor= $_POST['form_name_padre'];
             $ref_telefonoTutor= $_POST['form_tel_padre'];
             $id_curso = 3;
+            
+            
+            
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
             if($ingresar){ // No enviar alertas, busca alternativa
@@ -156,6 +163,8 @@ class cursos extends Controllers
                 <?php
             }
         }
+
+        $this->views->getView($this, 'semiIntensivo', $data);
     }
     
 }
