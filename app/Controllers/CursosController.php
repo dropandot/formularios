@@ -56,19 +56,7 @@ class cursos extends Controllers
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
             if($ingresar){ // No enviar alertas, busca alternativa
-                $this->enviar_correo->information($info);
-
-                ?>
-                    <script type="text/javascript">
-                    alert("registro completo");
-                    </script>
-                <?php
-            }else{
-                ?>
-                    <script type="text/javascript">
-                    alert("registro incompleto");
-                    </script>
-                <?php
+                $this->enviar_correo->information($info); 
             }
         }
 

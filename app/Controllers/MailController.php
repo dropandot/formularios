@@ -99,7 +99,8 @@ class Mail extends Controllers{
     
     private function sendEmail(array $info){
         try {
-            $this->phpmailer->setFrom($info['dp_email'], "Thinkers");
+            // $this->phpmailer->setFrom($info['dp_email'], "Thinkers");
+            $this->phpmailer->setFrom(USER_MAIL, "Thinkers");
            
             switch($info['curso']){
                 case "curso semestral":
@@ -116,74 +117,65 @@ class Mail extends Controllers{
                     break;
             }    
 
-            $this->phpmailer->addAddress(USER_MAIL);
+            $this->phpmailer->addAddress($info['dp_email']);
             $this->phpmailer->addReplyTo(USER_MAIL, 'Más Información');
             $this->phpmailer->Body = "
-            <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                background-color: #ebebeb;
-                font-family: Arial, Helvetica, sans-serif;
-                
-            }
-            
-            .cabecera{
-                display: flex;
-                height: 80px;
-                width: 100%;
-                justify-content: center;
-                margin: 20px 0px 50px;
-            }
-            
-            .info{
-                height: 500px;
-                width: 100%;
-                display: grid; 
-                justify-items: center;
-            }
-            .info__automatico{
-                display: flex;
-                justify-content: center;
-            }
-            .info__automatico-titulo{
-                margin-bottom: 60px;
-            }
-            .info__automatico-text{
-                color: #626466;
-                font-size: 0.85em;
-            }
-            
-            .info__grid{
-                display: grid;
-                grid-gap: 1rem;
-                justify-content: center;
-                width: 60%;
-                grid-template-columns: repeat(2,1fr);
-                grid-gap: 1.5rem;
-                line-height: 30px;
-            }
-            .info__alumno{
-                grid-row: 1/3;       
-            }
-            .info__titulo{
-                text-align: center;
-            }
-            .info__academicos{
-                grid-column: 1/3;
-            }
-            .info__automatico-text{
-                padding-top: 30px;
-            }
-               
-            </style>
             <head>
                 <meta http-equiv='Content-type' content='text/html; charset=utf-8'/>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,600;0,700;1,100;1,600;1,700&family=Merriweather:ital,wght@0,300;1,300&display=swap'); 
+
+                    :root {
+                        --titulo: 'Barlow', sans-serif;
+                    }
+                
+                    *{
+                        background:red;
+                        margin: 0;
+                        padding: 5px;
+                        box-sizing: border-box;
+                        background-color: #ebebeb;
+                        /*font-family: Arial, Helvetica, sans-serif;*/
+                        font-family: var(--titulo);
+                    }
+
+                    .cabecera{
+                        display: flex;
+                        height: 80px;
+                        width: 100%;
+                        justify-content: center;
+                        justify-items: center;
+                        margin: 20px 0px 50px;
+                    }
+
+                    .info{
+                        height: 500px;
+                        width: 100%;
+                    }
+
+                    .info__automatico{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        justify-items: center;
+                    }
+
+                    .info__automatico-titulo{
+                        margin-bottom: 60px;
+                        tex-align: center;
+                        color:blue;
+                    }
+
+                    .info__automatico-text{
+                        color: #626466;
+                        font-size: 2em;
+                    }
+                </style>
             </head>
             <body>
                 <header class='cabecera'>
-                    <img src='./public/img/logo.webp' alt='Logo Thinkers'>
+                    <!-- <img src='https://thinkersmx.com/wp-content/uploads/2021/01/logo_thinkers_525x144.png' alt='Logo Thinkers'> -->
+                    <img src='../public/img/logo.webp' alt='Logo Thinkers'> 
                 </header>
                 <section class='info'>
                     <div class='info__automatico'>
