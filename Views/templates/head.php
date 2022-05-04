@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/app.css">
     <title>Inscripciones Thinkers</title>
-    <link rel="icon" href="./public/img/favicon-min.png">
+    <link rel="icon" href="../../public/img/favicon-min.png">
     <?php require_once('Views/estilos.php'); ?>
 </head>
 
