@@ -20,6 +20,9 @@ class CursosModel extends Mysql{
         $arrData = array($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
         $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
         $request_insert = $this->insert($sql, $arrData);
+
+        
+
         return $request_insert;
     }
        

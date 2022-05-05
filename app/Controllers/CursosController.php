@@ -8,7 +8,7 @@ class cursos extends Controllers
     public function __construct()
     {
         parent::__construct();
-        $this->enviar_correo = new Mail();;
+        $this->enviar_correo = new Mail();
     }
 
     public function semestral() 
@@ -56,9 +56,17 @@ class cursos extends Controllers
 
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
+            // echo var_dump($ingresar);
+            // die;
             if($ingresar){ // No enviar alertas, busca alternativa
                 $this->enviar_correo->information($info);
-                $data['alertas'] = "alertas.js"; 
+                // $data['alertas'] = "alertas.js"; 
+                $response = [
+                    "status" => "ok",
+                    "valid" => true,
+                    "mensaje" => "Formulario enviado Correctamente"
+                ];
+                echo json_encode($response, true);
             }
         }
 

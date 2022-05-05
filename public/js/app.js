@@ -110,7 +110,7 @@ const validarFormulario = (e) => {
 }
 
 const validarSelect = (e, campo) => {
-    if (e.options.selectedIndex === 0) { //Valida si la primera opcion del select fue seleccionada si fue asi el nombre del capo va a seguir siendo false y por lo tanto va a desactivar el boton
+    if (e.options.selectedIndex < 0) { //Valida si la primera opcion del select fue seleccionada si fue asi el nombre del capo va a seguir siendo false y por lo tanto va a desactivar el boton
         campos[campo] = false;
         btn.disabled = true;
     } else {
@@ -165,11 +165,11 @@ function validar() {
 }
 //cuando los compos esten llenos el boton estara activo y por en de al dar click volvemos a verigicar que los campos esten correctos y validamos que la casilla de los acuardos tambien este seleccionada el formulario se va a reiniciar y el boton se volvera a desactivar de lo contrario no va a relaizar ninguna accion 
 formulario.addEventListener('submit', function(e) {
-    e.preventDefault();
+    //e.preventDefault();
     const terminos = document.getElementById('form-check');
 
     if (campos.nombre && campos.edad && campos.whattsapp && campos.correo && campos.facebook && campos.domicilio && campos.carrrera && campos.escuela && campos.comentario && campos.nombre_tutor && campos.celular && campos.horario && campos.porque && terminos.checked) {
-        formulario.reset();
+       // formulario.reset();
         console.log('completo');
         btn.disabled = true;
 

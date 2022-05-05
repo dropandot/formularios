@@ -25,10 +25,10 @@ const expresiones = {
     domicilio: /^[a-zA-Z0-9\s]{1,40}$/,
 
     universidad: /^[A-Z]{1,5}$/,
-    carrrera: /^[a-zA-Z]{1,20}$/,
-    escuela: /^[a-zA-Z]{1,20}$/,
+    carrrera: /^[a-zA-ZÀ-ÿ\s]{1,200}$/,
+    escuela: /^[a-zA-Z\s]{1,200}$/,
     horario: /^[a-zA-Z]{1,50}$/,
-    porque: /^[a-zA-Z\s]{1,100}$/,
+    porque: /^[a-zA-ZÀá-ÿ,. \s]{1,500}$/,
 
     comentario: /^[a-zA-Z\s]{1,200}$/,
     nombre_tutor: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -145,11 +145,8 @@ const validarFormulario = (e) => {
             validarCampo(expresiones.nombre_tutor, e.target, 'nombre_tutor');
             break;
         case "form_tel_padre":
-
             validarCampo(expresiones.celular, e.target, 'celular');
-
             break;
-
     }
 
 
@@ -184,9 +181,7 @@ textarea.forEach((text) => {
 function validar() {
     if (campos.nombre && campos.edad && campos.whattsapp && campos.correo && campos.facebook && campos.domicilio && campos.carrrera && campos.escuela && campos.comentario && campos.nombre_tutor && campos.celular && campos.universidad && campos.horario && campos.porque) {
         btn.disabled = false;
-
         console.log('completo');
-
     } else {
         console.log('incompleto');
     }
@@ -195,20 +190,14 @@ function validar() {
 
 }
 formulario.addEventListener('submit', function(e) {
-    e.preventDefault();
     const terminos = document.getElementById('form-check');
 
     if (campos.nombre && campos.edad && campos.whattsapp && campos.correo && campos.facebook && campos.domicilio && campos.carrrera && campos.escuela && campos.comentario && campos.nombre_tutor && campos.celular && campos.horario && campos.porque && terminos.checked) {
-        formulario.reset();
         console.log('completo');
         btn.disabled = true;
+        formulario.reset();
 
     } else {
         console.log('incompleto');
-
     }
-
-
-
-
 });
