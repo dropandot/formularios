@@ -12,7 +12,7 @@ const textarea = document.querySelectorAll('#form__d_p_f textarea');
 //nombre.
 
 const btn = document.getElementById('btnenviar');
-//btn.disabled = true;
+btn.disabled = true;
 const uni = document.getElementById('form-uni');
 
 
@@ -86,7 +86,7 @@ class Imprime2 {
 
             seleccionada
             campos[this.campo] = false;
-            //btn.disabled = true;
+            btn.disabled = true;
             console.log('select');
         } else {
             campos[this.campo] = true;
@@ -183,7 +183,7 @@ textarea.forEach((text) => {
 
 function validar() {
     if (campos.nombre && campos.edad && campos.whattsapp && campos.correo && campos.facebook && campos.domicilio && campos.carrrera && campos.escuela && campos.comentario && campos.nombre_tutor && campos.celular && campos.universidad && campos.horario && campos.porque) {
-       // btn.disabled = false;
+        btn.disabled = false;
 
         console.log('completo');
 
@@ -201,7 +201,7 @@ formulario.addEventListener('submit', function(e) {
     if (campos.nombre && campos.edad && campos.whattsapp && campos.correo && campos.facebook && campos.domicilio && campos.carrrera && campos.escuela && campos.comentario && campos.nombre_tutor && campos.celular && campos.horario && campos.porque && terminos.checked) {
         formulario.reset();
         console.log('completo');
-       // btn.disabled = true;
+        btn.disabled = true;
 
     } else {
         console.log('incompleto');

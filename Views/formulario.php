@@ -89,7 +89,7 @@
             </span>
         </div>
         <div class="form__boton">
-            <button name="registrer" class="form__enviar">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+            <button name="registrer" class="form__enviar" id="btnenviar">Enviar <i class="fa-regular fa-paper-plane"></i></button>
         </div>
        
     </form>
