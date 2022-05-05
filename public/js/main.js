@@ -2,7 +2,7 @@ const formulario = document.getElementById('form__d_p_f');
 const inputs = document.querySelectorAll('#form__d_p_f input');
 const selects = document.querySelectorAll('#form__d_p_f select');
 const textarea = document.querySelectorAll('#form__d_p_f textarea');
-console.log("hola");
+//console.log("hola");
 //console.log('Inputs: ', inputs);
 //console.log('Textarea: ', textarea);
 //console.log('Selects: ', selects);
