@@ -1,5 +1,5 @@
 <section class="form">
-    <form action="" method="post"> 
+    <form action="" method="post"name="form__d_p_f" id="form__d_p_f" class="form__d_p_f"> 
         <h2 class="form__titulo">Datos personales</h2>
         <div  class="form__d_f">
             <div class="form__100">
@@ -91,6 +91,7 @@
         <div class="form__boton">
             <button name="registrer" class="form__enviar">Enviar <i class="fa-regular fa-paper-plane"></i></button>
         </div>
+       
     </form>
-    
+    <script src="../public/js/main.js"></script>
 </section>
