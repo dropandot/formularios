@@ -60,13 +60,13 @@ class cursos extends Controllers
             // die;
             if($ingresar){ // No enviar alertas, busca alternativa
                 $this->enviar_correo->information($info);
-                // $data['alertas'] = "alertas.js"; 
-                $response = [
-                    "status" => "ok",
-                    "valid" => true,
-                    "mensaje" => "Formulario enviado Correctamente"
-                ];
-                echo json_encode($response, true);
+                $data['alertas'] = "alertas.js"; 
+                // $response = [
+                //     "status" => "ok",
+                //     "valid" => true,
+                //     "mensaje" => "Formulario enviado Correctamente"
+                // ];
+                // echo json_encode($response, true);
             }
         }
 

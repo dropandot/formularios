@@ -21,8 +21,6 @@ class CursosModel extends Mysql{
         $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
         $request_insert = $this->insert($sql, $arrData);
 
-        
-
         return $request_insert;
     }
        
