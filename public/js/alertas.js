@@ -1,6 +1,12 @@
-Swal.fire({
-    icon: 'error',
-    title: 'Oops...',
-    text: 'Something went wrong!',
-    footer: '<a href="">Why do I have this issue?</a>'
-});
+(async () => {
+    const { value: accept } = await Swal.fire({
+        icon: 'success',
+        title: '¡Felicidades!',
+        text: 'La inscripción a sido realizada con exito ✨'
+    })
+    
+    if (accept) {
+        //Swal.fire('You agreed with T&C :)')
+        window.location.href = "agradecimiento";
+    }
+})()

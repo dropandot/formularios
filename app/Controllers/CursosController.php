@@ -56,17 +56,10 @@ class cursos extends Controllers
 
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
-            // echo var_dump($ingresar);
-            // die;
-            if($ingresar){ // No enviar alertas, busca alternativa
+            
+            if($ingresar){ 
                 $this->enviar_correo->information($info);
-                $data['alertas'] = "alertas.js"; 
-                // $response = [
-                //     "status" => "ok",
-                //     "valid" => true,
-                //     "mensaje" => "Formulario enviado Correctamente"
-                // ];
-                // echo json_encode($response, true);
+                $data['alertas'] = "alertas.js";
             }
         }
 
@@ -97,18 +90,30 @@ class cursos extends Controllers
             $ref_telefonoTutor= $_POST['form_tel_padre'];
             $id_curso = 2;
             
-            
+            $info = [
+                'id_universidad' => $id_universidad,
+                'dp_nombre' => $dp_nombre,
+                'dp_edad' => $dp_edad,
+                'dp_whatsApp' => $dp_whatsApp,
+                'dp_email' => $dp_email,
+                'dp_facebook' => $dp_facebook,
+                'dp_domicilio' => $dp_domicilio,
+                'data_carrera' => $data_carrera,
+                'data_escuela' => $data_escuela,
+                'data_horario' => $data_horario,
+                'data_razonIngreso' => $data_razonIngreso,
+                'ref_saberNosotros' => $ref_saberNosotros, 
+                'ref_nombreTutor' => $ref_nombreTutor,
+                'ref_telefonoTutor' => $ref_telefonoTutor,
+                'id_curso' => $id_curso
+            ];
 
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
-            if($ingresar){ // No enviar alertas, busca alternativa
-                
-            }else{
-                ?>
-                    <script type="text/javascript">
-                    alert("registro incompleto");
-                    </script>
-                <?php
+            
+            if($ingresar){ 
+                $this->enviar_correo->information($info);
+                $data['alertas'] = "alertas.js";
             }
         }
 
@@ -139,26 +144,45 @@ class cursos extends Controllers
             $ref_telefonoTutor= $_POST['form_tel_padre'];
             $id_curso = 3;
             
-            
-            
+            $info = [
+                'id_universidad' => $id_universidad,
+                'dp_nombre' => $dp_nombre,
+                'dp_edad' => $dp_edad,
+                'dp_whatsApp' => $dp_whatsApp,
+                'dp_email' => $dp_email,
+                'dp_facebook' => $dp_facebook,
+                'dp_domicilio' => $dp_domicilio,
+                'data_carrera' => $data_carrera,
+                'data_escuela' => $data_escuela,
+                'data_horario' => $data_horario,
+                'data_razonIngreso' => $data_razonIngreso,
+                'ref_saberNosotros' => $ref_saberNosotros, 
+                'ref_nombreTutor' => $ref_nombreTutor,
+                'ref_telefonoTutor' => $ref_telefonoTutor,
+                'id_curso' => $id_curso
+            ];
+
             $ingresar = $this->model->InsertarIngresos($id_universidad, $dp_nombre, $dp_edad, $dp_whatsApp, $dp_email, $dp_facebook, $dp_domicilio, $data_carrera,
             $data_escuela, $data_horario, $data_razonIngreso, $ref_saberNosotros, $ref_nombreTutor, $ref_telefonoTutor, $id_curso);
-            if($ingresar){ // No enviar alertas, busca alternativa
-                ?>
-                    <script type="text/javascript">
-                    alert("registro completo");
-                    </script>
-                <?php
-            }else{
-                ?>
-                    <script type="text/javascript">
-                    alert("registro incompleto");
-                    </script>
-                <?php
+            
+            if($ingresar){ 
+                $this->enviar_correo->information($info);
+                $data['alertas'] = "alertas.js";
+
             }
         }
 
         $this->views->getView($this, 'semiIntensivo', $data);
+    }
+
+    public function agradecimiento(){
+        $data = [
+            'cabecera' => '',
+            'tag_pages' => 'Agradecimiento',
+            'alertas'
+        ];
+
+        $this->views->getView($this, 'agradecimiento', $data);
     }
     
 }

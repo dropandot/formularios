@@ -195,8 +195,7 @@ formulario.addEventListener('submit', function(e) {
     if (campos.nombre && campos.edad && campos.whattsapp && campos.correo && campos.facebook && campos.domicilio && campos.carrrera && campos.escuela && campos.comentario && campos.nombre_tutor && campos.celular && campos.horario && campos.porque && terminos.checked) {
         console.log('completo');
         btn.disabled = true;
-        formulario.reset();
-
+        // formulario.reset();
     } else {
         console.log('incompleto');
     }
