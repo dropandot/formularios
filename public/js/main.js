@@ -189,7 +189,7 @@ function validar() {
     console.log(campos);
 
 }
-formulario.addEventListener('submit', function(e) {
+formulario.addEventListener('register', function(e) {
     const terminos = document.getElementById('form-check');
 
     if (campos.nombre && campos.edad && campos.whattsapp && campos.correo && campos.facebook && campos.domicilio && campos.carrrera && campos.escuela && campos.comentario && campos.nombre_tutor && campos.celular && campos.horario && campos.porque && terminos.checked) {
