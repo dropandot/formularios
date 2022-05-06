@@ -19,9 +19,7 @@ class cursos extends Controllers
             'alertas'
         ];
 
-        foreach($_POST as $post){
-            echo $post . "<br>";
-        }
+       
 
         if (!empty($_POST)) {
             $id_universidad = $_POST['form_uni'];
