@@ -285,6 +285,9 @@
     color: #626466;
     font-size: 1.2em;
 }
+.form__input textarea{
+    padding: 10px;
+}
 .form__d_f{  
     display: grid;
     grid-gap: 1rem;
